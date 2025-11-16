@@ -1,0 +1,10 @@
+.activity-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; 
+  padding-left: 16px; 
+  padding-right: 16px; 
+  padding-top: 0; 
+  margin-top: 0;
+  margin-bottom: 30px; 
+}

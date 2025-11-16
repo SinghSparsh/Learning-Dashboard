@@ -1,0 +1,174 @@
+/* src/components/WelcomeBanner/WelcomeBanner.css */
+.welcome-banner {
+  background: linear-gradient(135deg, #5140bb, #7a5cdb); 
+  border-radius: 18px; 
+  padding: 35px 30px 40px 30px;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+  margin: 30px 16px 30px 16px; 
+  position: relative; 
+}
+
+@media (min-width: 768px) {
+    .welcome-banner {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+}
+
+.banner-content {
+  max-width: 800px; 
+}
+
+.banner-header-row {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    margin-bottom: 20px; 
+}
+
+.banner-greeting {
+  font-size: 3rem; 
+  font-weight: 700;
+  margin-bottom: 5px; 
+  display: block; 
+}
+
+.smiley-icon {
+  color: #ffda5a; 
+  margin-top: 5px; 
+  min-width: 50px; 
+  height: auto;
+}
+
+.banner-tagline {
+  font-size: 1.25rem; 
+  line-height: 1.5; 
+  font-weight: 400;
+  opacity: 0.9;
+  margin-bottom: 0; 
+}
+
+.banner-content > .status-cards-container {
+    margin-top: 40px; 
+}
+
+.status-cards-container {
+  display: flex;
+  gap: 25px; 
+  flex-wrap: wrap; 
+  justify-content: flex-start; 
+}
+
+.status-card {
+  background: rgba(0, 0, 0, 0.25); 
+  border-radius: 12px;
+  padding: 20px 25px; 
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center; 
+  width: 160px; 
+  flex: 0 0 auto; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.count-icon-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; 
+    margin-bottom: 5px; 
+}
+
+.status-card svg {
+  color: #c5b9f7; 
+  order: 0; 
+  margin-bottom: 0; 
+}
+
+.status-count {
+  font-size: 3rem; 
+  font-weight: 700;
+  margin-bottom: 0; 
+}
+
+.status-label {
+  font-size: 1rem; 
+  opacity: 0.8;
+  margin-top: 8px; 
+}
+
+
+@media (max-width: 767px) {
+  .welcome-banner {
+    padding: 25px 20px 30px 20px;
+    margin: 20px 10px;
+  }
+
+  .banner-greeting {
+    font-size: 2rem;
+    gap: 10px;
+  }
+
+  .smiley-icon {
+    min-width: 35px;
+    font-size: 35px;
+    margin-top: 0;
+  }
+
+  .banner-tagline {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .banner-content > .status-cards-container {
+      margin-top: 30px;
+  }
+
+  .status-cards-container {
+    flex-direction: column; 
+    gap: 15px;
+  }
+
+  .status-card {
+    width: 90%;
+    max-width: none;
+    padding: 15px 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+  
+  .count-icon-group {
+      justify-content: flex-start;
+      margin-bottom: 0;
+  }
+
+  .status-card svg {
+    font-size: 24px;
+  }
+
+  .status-count {
+    font-size: 1.8rem;
+  }
+
+  .status-label {
+    font-size: 0.9rem;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 399px) {
+    .banner-greeting {
+        font-size: 1.8rem;
+    }
+    .smiley-icon {
+        min-width: 30px;
+        font-size: 30px;
+    }
+    .banner-tagline {
+        font-size: 0.9rem;
+    }
+}

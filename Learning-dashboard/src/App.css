@@ -1,0 +1,148 @@
+:root {
+  --breakpoint-mobile: 576px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 992px;
+  --color-background-primary: #181d2f; 
+  --color-background-secondary: #1e2547; 
+  --color-background-sidebar: #171b2e; 
+  --color-background-card-medium: #1b213b; 
+  
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #adb9e7; 
+  --color-text-accent: #94aafc; 
+  
+  --color-border-subtle: #20264b; 
+  --color-border-card: #293256; 
+
+  --color-accent-blue: #4358c5; 
+  
+  --color-status-class: #70d5ed;
+  --color-status-assessment: #fa7970;
+  --color-status-progress-fill: #305297;
+  
+  --color-status-in-progress-bg: #2a2007;
+  --color-status-not-started-bg: #231a13;
+  --color-status-completed-bg: #0c2b23;
+  --color-status-in-progress-text: #ffba52;
+  --color-status-not-started-text: #f4a664;
+  --color-status-completed-text: #1fd890;
+}
+
+.app.light {
+  --color-background-primary: #f8f9fa; 
+  --color-background-secondary: #ffffff; 
+  --color-background-sidebar: #ffffff; 
+  --color-background-card-medium: #ffffff;
+  
+  --color-text-primary: #1f2937;
+  --color-text-secondary: #6b7280;
+  --color-text-accent: #1f2937;
+  
+  --color-border-subtle: #e5e7eb;
+  --color-border-card: #d1d5db;
+  
+  --color-status-in-progress-bg: #fffbe6;
+  --color-status-not-started-bg: #fff0e5;
+  --color-status-completed-bg: #e6ffed;
+}
+
+.app.light .search-bar input {
+  background: var(--color-background-secondary); 
+  color: var(--color-text-primary);
+  border-color: var(--color-border-subtle);
+}
+
+.app.light .activity-card {
+  background: var(--color-background-card-medium); 
+  border-color: var(--color-border-subtle);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+}
+
+.app.light .activity-type-tabs {
+  background: var(--color-background-card-medium);
+  border: 1px solid var(--color-border-card);
+}
+.app.light .activity-type-tabs button.active {
+    background: var(--color-accent-blue);
+    color: var(--color-text-primary);
+}
+.app.light .activity-type-tabs button {
+    color: var(--color-text-secondary);
+}
+body {
+ background: var(--color-background-primary);
+  color: var(--color-text-primary);
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  height: calc(100vh - 70px); 
+}
+
+.content {
+  flex-grow: 1;
+  padding: 12px 18px; 
+background: var(--color-background-primary);
+  overflow-y: auto;
+  min-height: 0;
+}
+.activity-stream-title {
+    font-size: 1.8rem;
+color: var(--color-text-primary);
+    margin: 30px 16px 20px 16px;
+    font-weight: 600;
+
+    @media (min-width: 768px) {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+}
+@media (min-width: 768px) {
+    .content {
+        padding: 6px 24px 12px 24px;
+    }
+}
+
+.activity-type-tabs {
+    display: flex;
+    gap: 0;
+    
+    background: #1b213b; 
+    border-radius: 8px;
+    padding: 6px;
+    
+    margin: 0 16px 25px 16px;
+    
+    width: 90%;
+}
+
+.activity-type-tabs button {
+    flex-grow: 1;
+    text-align: center;
+    background: transparent;
+    color: #a9c1ff;
+    border: none;
+    padding: 10px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.activity-type-tabs button:hover:not(.active) {
+    background: #232b4b;
+}
+
+.activity-type-tabs button.active {
+    background: #4358c5;
+    color: #fff;
+    font-weight: 600;
+}
