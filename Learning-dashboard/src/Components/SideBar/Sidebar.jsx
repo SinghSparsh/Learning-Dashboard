@@ -1,6 +1,7 @@
 import React from "react";
 import { FiX } from "react-icons/fi";
-import "./Sidebar.css";
+import "./SideBar.css";
+
 
 export default function Sidebar({ filters, setFilter, status, setStatus, time, setTime, isSidebarOpen, toggleSidebar }) {
   
