@@ -125,3 +125,29 @@
     display: none;
   }
 }
+
+@media (max-width: 400px) {
+  .filter-group {
+    padding: 10px 8px;
+    border-radius: 6px;
+  }
+
+  .filter-group strong {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+
+  .filter-group button {
+    font-size: 0.92rem;
+    padding: 8px 10px;
+    border-radius: 5px;
+    margin: 7px 0;
+  }
+
+  .filter-group .reset-button {
+    padding-top: 8px;
+    margin-top: 8px;
+    font-size: 0.92rem;
+  }
+}
