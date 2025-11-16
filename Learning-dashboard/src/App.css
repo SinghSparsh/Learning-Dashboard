@@ -6,45 +6,42 @@
   --color-background-secondary: #1e2547; 
   --color-background-sidebar: #171b2e; 
   --color-background-card-medium: #1b213b; 
-  
   --color-text-primary: #ffffff;
   --color-text-secondary: #adb9e7; 
   --color-text-accent: #94aafc; 
-  
   --color-border-subtle: #20264b; 
   --color-border-card: #293256; 
-
   --color-accent-blue: #4358c5; 
-  
   --color-status-class: #70d5ed;
   --color-status-assessment: #fa7970;
   --color-status-progress-fill: #305297;
-  
   --color-status-in-progress-bg: #2a2007;
-  --color-status-not-started-bg: #231a13;
+  --color-status-not-started-bg: #3a2c2c; 
   --color-status-completed-bg: #0c2b23;
   --color-status-in-progress-text: #ffba52;
-  --color-status-not-started-text: #f4a664;
+  --color-status-not-started-text: #e27d7d;
   --color-status-completed-text: #1fd890;
 }
 
 .app.light {
-  --color-background-primary: #f8f9fa; 
-  --color-background-secondary: #ffffff; 
-  --color-background-sidebar: #ffffff; 
-  --color-background-card-medium: #ffffff;
-  
-  --color-text-primary: #1f2937;
-  --color-text-secondary: #6b7280;
-  --color-text-accent: #1f2937;
-  
-  --color-border-subtle: #e5e7eb;
-  --color-border-card: #d1d5db;
-  
-  --color-status-in-progress-bg: #fffbe6;
-  --color-status-not-started-bg: #fff0e5;
-  --color-status-completed-bg: #e6ffed;
+  --color-background-primary: #eef2fa;
+  --color-background-secondary: #e2ecf9;
+  --color-background-sidebar: #d4e0ea;
+  --color-background-card-medium: #e8f1fb;
+  --color-text-primary: #2e3a4f;
+  --color-text-secondary: #6c7a92;
+  --color-text-accent: #3e5878;
+  --color-border-subtle: #bed0e3;
+  --color-border-card: #b1c1d6;
+  --color-status-in-progress-bg: #d8e5f5;
+  --color-status-not-started-bg: #f4e7d8;
+  --color-status-completed-bg: #d4efdf;
+  --color-status-in-progress-text: #4a6fa3;
+  --color-status-not-started-text: #b08d57;
+  --color-status-completed-text: #3a7f5d;
+  --color-accent-blue: #5476b3;
 }
+
 
 .app.light .search-bar input {
   background: var(--color-background-secondary); 
@@ -69,6 +66,7 @@
 .app.light .activity-type-tabs button {
     color: var(--color-text-secondary);
 }
+
 body {
  background: var(--color-background-primary);
   color: var(--color-text-primary);
@@ -93,33 +91,30 @@ background: var(--color-background-primary);
   overflow-y: auto;
   min-height: 0;
 }
+
 .activity-stream-title {
     font-size: 1.8rem;
-color: var(--color-text-primary);
+    color: var(--color-text-primary);
     margin: 30px 16px 20px 16px;
     font-weight: 600;
-
-    @media (min-width: 768px) {
-        margin-left: 16px;
-        margin-right: 16px;
-    }
 }
 @media (min-width: 768px) {
     .content {
         padding: 6px 24px 12px 24px;
+    }
+    .activity-stream-title {
+        margin-left: 16px;
+        margin-right: 16px;
     }
 }
 
 .activity-type-tabs {
     display: flex;
     gap: 0;
-    
     background: #1b213b; 
     border-radius: 8px;
     padding: 6px;
-    
     margin: 0 16px 25px 16px;
-    
     width: 90%;
 }
 

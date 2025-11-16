@@ -1,39 +1,47 @@
+
 .sidebar {
-  background: var(--color-background-sidebar); 
+  background: var(--color-background-sidebar);
   color: var(--color-text-secondary);
-  width: 320px; 
-  padding: 30px 15px; 
+  width: 320px;
+  max-width: 100%;
+  padding: 30px 15px;
   display: flex;
   flex-direction: column;
-  gap: 20px; 
+  gap: 20px;
   border-right: 1px solid var(--color-border-subtle);
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
-  
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 70px;
   left: 0;
-  height: calc(100vh - 70px); 
+  height: calc(100vh - 70px);
   z-index: 100;
   transform: translateX(-100%);
   transition: transform 0.3s ease-out;
   overflow-y: auto;
 }
 
+@media (max-width: 767px) {
+  .sidebar {
+    width: 70%;
+    max-width: 100%;
+    padding-top: 60px;
+  }
+} 
+
 .sidebar.open {
-  transform: translateX(0); 
+  transform: translateX(0);
 }
 
 @media (min-width: 768px) {
   .sidebar {
-    position: relative; 
+    position: relative;
     transform: translateX(0);
     width: 260px;
     min-width: 260px;
-    height: auto; 
+    height: auto;
     top: auto;
     left: auto;
-    border-right: 1px solid var(--color-border-subtle);
-    box-shadow: none; 
+    box-shadow: none;
   }
 }
 
@@ -43,85 +51,77 @@
   padding: 20px 18px;
   box-sizing: border-box;
   width: 100%;
-  border-radius: 12px; 
-  border: 1px solid var(--color-border-card); 
+  border-radius: 12px;
+  border: 1px solid var(--color-border-card);
 }
 
 .filter-group strong {
-  font-size: 1.25rem; 
-  font-weight: 600; 
-  margin-bottom: 18px; 
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 18px;
   display: block;
-  color: var(--color-text-accent); 
+  color: var(--color-text-accent);
   border-bottom: 1px solid var(--color-border-card);
-  padding-bottom: 15px; 
+  padding-bottom: 15px;
 }
 
 .filter-group button {
-  display: flex; 
+  display: flex;
   align-items: center;
-  margin: 10px 0; 
+  margin: 10px 0;
   width: 100%;
-  background: transparent; 
-  color: var(--color-text-secondary); 
+  background: transparent;
+  color: var(--color-text-secondary);
   border: none;
-  padding: 12px 14px; 
-  border-radius: 8px; 
+  padding: 12px 14px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: all 0.2s ease-in-out; 
+  transition: all 0.2s ease-in-out;
   text-align: left;
-  font-size: 1rem; 
+  font-size: 1rem;
 }
 
 .filter-group button:hover {
-  background: var(--color-border-subtle); 
+  background: var(--color-border-subtle);
   color: var(--color-text-primary);
 }
 
 .filter-group button.active {
-  background: var(--color-accent-blue); 
+  background: var(--color-accent-blue);
   color: var(--color-text-primary);
   font-weight: 600;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
 }
 
 .filter-group .reset-button {
-  background: transparent; 
-  color: var(--color-text-accent); 
-  margin-top: 15px; 
-  text-align: center; 
+  background: transparent;
+  color: var(--color-text-accent);
+  margin-top: 15px;
+  text-align: center;
   justify-content: center;
   border-top: 1px solid var(--color-border-subtle);
   padding-top: 15px;
-  padding-bottom: 0;
-  border-radius: 0;
 }
 
 .filter-group .reset-button:hover {
-  background: var(--color-border-subtle); 
-  color: var(--color-text-primary);
-}
-
-.filter-group .reset-button.active {
-    background: transparent !important;
-    color: var(--color-text-accent) !important;
-    box-shadow: none !important;
+  background: var(--color-border-subtle);
 }
 
 .close-sidebar-button {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: none;
-    border: none;
-    color: var(--color-text-secondary);
-    cursor: pointer;
-    display: block;
-    padding: 5px; 
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  display: block;
+  padding: 5px;
+  z-index: 150;
 }
 
 @media (min-width: 768px) {
-    .close-sidebar-button {
-        display: none; 
-    }
+  .close-sidebar-button {
+    display: none;
+  }
 }

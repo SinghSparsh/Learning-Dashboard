@@ -23,15 +23,16 @@ export default function ActivityCard({ activity }) {
 
   return (
     <div className={`activity-card`}>
-      <div className="activity-meta">
-        <span className="category">{activity.category}</span>
-      </div>
       
       <div className={`activity-status-badge ${badgeClass}`}>
         {activity.status === "In Progress" && activity.progress
           ? `${badgeText} (${activity.progress}%)`
           : badgeText
         }
+      </div>
+      
+      <div className="activity-meta">
+        <span className="category">{activity.category}</span>
       </div>
       
       <h3>{activity.title}</h3>

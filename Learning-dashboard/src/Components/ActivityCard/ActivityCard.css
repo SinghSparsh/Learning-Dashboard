@@ -1,7 +1,7 @@
 .activity-card {
   background: var(--color-background-card-medium);
   border-radius: 12px;
-  padding: 20px;
+  padding: 20px; 
   min-height: 240px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -10,26 +10,31 @@
   margin-bottom: 0;
   border: 1px solid var(--color-border-card);
   position: relative;
-  overflow: hidden;
+  overflow: hidden; 
 }
 
 .activity-status-badge {
-  position: absolute;
-  top: 15px;
-  right: 15px;
+  position: absolute; 
+  top: 0; 
+  left: 0; 
   display: inline-block;
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-size: 0.85rem;
+  padding: 8px 15px; 
+  font-size: 0.9rem; 
   font-weight: 600;
-  vertical-align: middle;
-  letter-spacing: 0;
-  z-index: 2;
+  color: var(--color-text-primary); 
+  text-align: center;
+  white-space: nowrap; 
+  border-top-left-radius: 12px; 
+  border-bottom-right-radius: 12px; 
+  border-top-right-radius: 0; 
+  border-bottom-left-radius: 0; 
+  z-index: 10; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
 }
 
 .status-in-progress {
-  background: var(--color-status-in-progress-bg);
-  color: var(--color-status-in-progress-text);
+  background: var(--color-status-in-progress-bg); 
+  color: var(--color-status-in-progress-text); 
 }
 
 .status-completed {
@@ -42,22 +47,26 @@
   color: var(--color-status-not-started-text);
 }
 
+.activity-card {
+  padding-top: 50px; 
+  padding-left: 20px; 
+  padding-right: 20px; 
+  padding-bottom: 20px; 
+}
+
 .activity-meta .category {
-  position: absolute;
-  top: 15px;
-  left: 20px;
   font-size: 0.9rem;
   color: var(--color-text-secondary);
   font-weight: 500;
   display: block;
   z-index: 2;
-  margin-bottom: 0;
+  margin-bottom: 8px; 
 }
 
 .activity-card h3 {
   font-size: 1.25rem;
   color: var(--color-text-primary);
-  margin: 55px 0 15px 0;
+  margin: 0 0 15px 0; 
   line-height: 1.4;
   font-weight: 600;
 }
